@@ -158,35 +158,6 @@ class _LifeGamePageState extends State<LifeGamePage> {
               ],
             ),
             const SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 80,
-                    child: TextField(
-                      controller: _controller,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        labelText: '단계',
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  ElevatedButton(
-                    onPressed: () {
-                      int? target = int.tryParse(_controller.text);
-                      if (target != null && target >= 0) {
-                        model.goToGeneration(target);
-                      }
-                    },
-                    child: const Text('확인'),
-                  ),
-                ],
-              ),
-            ),
             const SizedBox(height: 20),
           ],
         ),
